@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class MyTest extends TestCase
+class MyTest2 extends TestCase
 {
     public function testSum()
     {
@@ -29,17 +29,11 @@ class MyTest extends TestCase
         $this->assertFalse($expired);
 
         $value = Null;
-        $user="User";
+        $user='User';
         $this->assertNull($value);
         $this->assertNull($user); // Falure test 2
         $this->assertNotNull($user);
 #        $this->assertNotNull($value); // Falure test 3
-
-        $emptyArray = [];
-        $nonEmptyString='str';
-        $this->assertEmpty($emptyArray); // Проверяет, что массив пустой
-        $this->assertNotEmpty($nonEmptyString); // Проверяет, что строка не пустая
-
     }
 }
 

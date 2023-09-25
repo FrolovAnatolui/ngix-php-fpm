@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit>
+    <php>
+        <ini name="xdebug.mode" value="debug" />
+        <ini name="xdebug.client_host" value="host.docker.internal" />
+        <ini name="xdebug.client_port" value="9003" />
+        <ini name="xdebug.idekey" value="PHPSTORM" />
+    </php>
+
     <testsuites>
         <testsuite name="My Tests">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
-

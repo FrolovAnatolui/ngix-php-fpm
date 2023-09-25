@@ -5,10 +5,12 @@ services:
       context: ./docker/php
     volumes:
       - ./data:/var/www
-      - ./configs/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./configs/xdebug/xdebug.ini:/var/conf.d/xdebug.ini
       - ./tests:/var/www/html/tests
     ports:
       - "9000:9000"
+    environment:
+      PHP_INI_SCAN_DIR: /usr/local/etc/php/conf.d:/var/conf.d/
 
   nginx:
     build:
